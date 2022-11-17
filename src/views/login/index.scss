@@ -1,0 +1,17 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .login-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 600px;
+        height: 400px;
+        border: 1px solid #000;
+    }
+}
