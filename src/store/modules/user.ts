@@ -10,7 +10,7 @@ export const useUserStore = defineStore(
   {
     state: () => {
       return {
-        token: '',
+        token: localstorage.getItem(TOKEN) || '',
       }
     },
     actions: {
@@ -19,6 +19,8 @@ export const useUserStore = defineStore(
 
         this.token = res.data.token
         localstorage.setItem(TOKEN, this.token)
+
+        return Promise.resolve(true)
       },
     },
   },

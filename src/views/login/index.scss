@@ -1,9 +1,16 @@
 .login {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: rgba(18, 18, 19, 0.9);
+
+    .title {
+        font-size: 30px;
+        color: aliceblue;
+    }
 
     .login-main {
         display: flex;
@@ -13,5 +20,7 @@
         width: 600px;
         height: 400px;
         border: 1px solid #000;
+        border-radius: 10px;
+        background-color: rgb(228, 235, 241);
     }
 }

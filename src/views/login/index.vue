@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import type { FormInstance, FormRules } from 'element-plus'
 import { useUserStore } from '@/store/modules/user'
 
@@ -13,6 +14,7 @@ const rules: FormRules = {
   password: [{ required: true, message: 'Please input your password', trigger: 'blur' }],
 }
 const userStore = useUserStore()
+const router = useRouter()
 
 /**
  * 登陆
@@ -22,15 +24,20 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl)
     return
 
-  await formEl.validate((valid, fields) => {
-    if (valid)
-      userStore.login(formData.value.username, formData.value.password)
+  await formEl.validate(async (valid, fields) => {
+    if (valid) {
+      const flag = await userStore.login(formData.value.username, formData.value.password)
+      flag && router.push('/')
+    }
   })
 }
 </script>
 
 <template>
   <div class="login">
+    <h3 class="title">
+      Welcome anxiety platform
+    </h3>
     <div class="login-main">
       <el-form
         ref="ruleFormRef"
