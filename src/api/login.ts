@@ -11,7 +11,7 @@ interface LoginDataType {
  */
 export const login = (data: LoginDataType) => {
   return request({
-    url: '/sys/login',
+    url: '/api/sys/login',
     method: 'POST',
     data,
   })
