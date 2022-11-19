@@ -3,7 +3,9 @@ import { } from 'vue'
 </script>
 
 <template>
-  <div>主页</div>
+  <div>
+    主页
+  </div>
 </template>
 
 <style scoped src="./index.scss">
