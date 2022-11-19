@@ -1,0 +1,16 @@
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    svg {
+        width: 600px;
+        height: 600px;
+    }
+
+    h3 {
+        font-size: 80px;
+    }
+}
