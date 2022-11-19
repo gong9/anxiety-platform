@@ -36,7 +36,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 <template>
   <div class="login">
     <h3 class="title">
-      Welcome anxiety platform
+      Welcome to anxiety platform
     </h3>
     <div class="login-main">
       <el-form
