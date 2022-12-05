@@ -1,11 +1,14 @@
+/**
+ * @file localstorage
+ */
+
 const localstorage = {
   setItem(key: string, data: unknown) {
-    if (data === null)
-      throw new Error('null是非法存储数据')
-    if (typeof data === 'function')
-      throw new Error('不支持存储函数')
+    if (data === null || typeof data === 'function')
+      throw new Error('Illegal data structure')
 
     let cache: string
+
     if (typeof data === 'object')
       cache = JSON.stringify(data)
     else

@@ -8,11 +8,13 @@ const formData = ref({
   username: 'super-admin',
   password: '123456',
 })
+
 const ruleFormRef = ref<FormInstance>()
 const rules: FormRules = {
   username: [{ required: true, message: 'Please input your name', trigger: 'blur' }],
   password: [{ required: true, message: 'Please input your password', trigger: 'blur' }],
 }
+
 const userStore = useUserStore()
 const router = useRouter()
 
