@@ -1,0 +1,7 @@
+@import './variables.scss';
+
+.sidebar{
+    width: $sidebarWidth;
+    height: 100vh;
+    background-color: $sidebarBgc;
+}

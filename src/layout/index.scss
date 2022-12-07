@@ -1,0 +1,11 @@
+@import './sidebar/variables.scss';
+
+.root-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    .main-container{
+        width: calc(100% - $sidebarWidth);
+        height: 100%;
+    }
+}
