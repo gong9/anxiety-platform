@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watchPostEffect } from 'vue'
 import injectionJs2Css from '../../utils/injectionJs2Css'
 const props = defineProps({
   sidebarBackgroundColor: {
@@ -10,7 +10,7 @@ const props = defineProps({
 
 const sidebarRef = ref<HTMLDivElement | null>(null)
 
-onMounted(() => {
+watchPostEffect(() => {
   injectionJs2Css(
     (sidebarRef.value as HTMLDivElement),
     {
