@@ -23,7 +23,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.imooc-admin.lgdsunday.club/',
+        target: 'https://gong-server.onrender.com/admin/',
         changeOrigin: true,
       },
     },

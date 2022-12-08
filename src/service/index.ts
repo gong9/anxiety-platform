@@ -14,7 +14,7 @@ aixosInstance.interceptors.request.use(
     config.headers!.icode = '47CD3D47C575726C'
 
     if (localstorage.getItem(TOKEN))
-      config.headers!.Authorization = `Bearer ${localstorage.getItem(TOKEN)}`
+      config.headers!.Authorization = `${localstorage.getItem(TOKEN)}`
 
     return config
   },

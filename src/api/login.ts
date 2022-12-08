@@ -6,7 +6,7 @@ interface LoginDataType {
 }
 export const login = (data: LoginDataType) => {
   return request({
-    url: '/api/sys/login',
+    url: '/api/admin/login',
     method: 'POST',
     data,
   })
@@ -14,7 +14,7 @@ export const login = (data: LoginDataType) => {
 
 export const getUserInfo = () => {
   return request({
-    url: '/api/sys/profile',
+    url: '/api/admin.user',
     method: 'GET',
   })
 }
