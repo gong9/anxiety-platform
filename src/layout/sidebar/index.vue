@@ -1,9 +1,27 @@
 <script setup lang='ts'>
-import { } from 'vue'
+import { onMounted, ref } from 'vue'
+import injectionJs2Css from '../../utils/injectionJs2Css'
+const props = defineProps({
+  sidebarBackgroundColor: {
+    type: String,
+    required: true,
+  },
+})
+
+const sidebarRef = ref<HTMLDivElement | null>(null)
+
+onMounted(() => {
+  injectionJs2Css(
+    (sidebarRef.value as HTMLDivElement),
+    {
+      backgroundColor: props.sidebarBackgroundColor,
+    },
+  )
+})
 </script>
 
 <template>
-  <div class="sidebar">
+  <div ref="sidebarRef" class="sidebar">
     sidebar
   </div>
 </template>

@@ -1,13 +1,15 @@
 <script setup lang='ts'>
-import { } from 'vue'
+import { ref } from 'vue'
 import AppMain from './appMain/index.vue'
 import Navbar from './navbar/index.vue'
 import Sidebar from './sidebar/index.vue'
+
+const sidebarBackgroundColor = ref('#304156')
 </script>
 
 <template>
   <div class="root-container">
-    <Sidebar class="sidebar-container" />
+    <Sidebar class="sidebar-container" :sidebar-background-color="sidebarBackgroundColor" />
     <div class="main-container">
       <Navbar />
       <AppMain />
