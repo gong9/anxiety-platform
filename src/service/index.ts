@@ -6,7 +6,7 @@ import { TOKEN } from '@/constant'
 
 const aixosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
-  timeout: 1000,
+  timeout: 5000,
 })
 
 aixosInstance.interceptors.request.use(

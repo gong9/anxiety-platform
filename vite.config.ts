@@ -22,8 +22,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
-        target: 'https://gong-server.onrender.com/admin/',
+      '/admin': {
+        target: 'https://gong-server.onrender.com/',
         changeOrigin: true,
       },
     },
