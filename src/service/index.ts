@@ -24,7 +24,6 @@ aixosInstance.interceptors.response.use((response) => {
   const { status, data } = response
 
   if (status === 200 && data && data.success && data.data) {
-    ElMessage.success(data.message)
     return data
   }
 

@@ -14,7 +14,7 @@ export const login = (data: LoginDataType) => {
 
 export const getUserInfo = () => {
   return request({
-    url: '/admin.user',
+    url: '/admin/user',
     method: 'GET',
   })
 }

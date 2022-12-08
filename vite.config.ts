@@ -23,7 +23,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/admin': {
-        target: 'https://gong-server.onrender.com/',
+        target: 'http://localhost:3030/',
         changeOrigin: true,
       },
     },
