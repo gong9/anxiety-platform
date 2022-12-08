@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import { Md5 } from 'ts-md5'
+import { getUserInfo as getUserInfoApi, login as loginApi } from '@/api/login'
 import localstorage from '@/utils/localstorage'
 import { TOKEN } from '@/constant'
-import { login as loginApi } from '@/api/login'
 
 export const useUserStore = defineStore(
   'user',
@@ -10,6 +10,7 @@ export const useUserStore = defineStore(
     state: () => {
       return {
         token: localstorage.getItem(TOKEN) || '',
+        userInfo: null,
       }
     },
     actions: {
@@ -20,6 +21,11 @@ export const useUserStore = defineStore(
         localstorage.setItem(TOKEN, this.token)
 
         return Promise.resolve(true)
+      },
+
+      async getUserInfo() {
+        const res = await getUserInfoApi()
+        this.userInfo = res.data
       },
     },
   },

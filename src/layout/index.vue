@@ -4,7 +4,7 @@ import AppMain from './appMain/index.vue'
 import Navbar from './navbar/index.vue'
 import Sidebar from './sidebar/index.vue'
 
-const sidebarBackgroundColor = ref('#304156')
+const sidebarBackgroundColor = ref('#2b2e31')
 </script>
 
 <template>
